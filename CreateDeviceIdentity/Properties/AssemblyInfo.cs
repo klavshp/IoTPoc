@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IoTPoc")]
+[assembly: AssemblyTitle("CreateDeviceIdentity")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IoTPoc")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("DLM")]
+[assembly: AssemblyProduct("CreateDeviceIdentity")]
+[assembly: AssemblyCopyright("Copyright © DLM 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("30dd8a53-23f5-43ea-b38d-884d7d8e8c78")]
+[assembly: Guid("ab07e432-399f-4290-820d-84bacdba4e6c")]
 
 // Version information for an assembly consists of the following four values:
 //
