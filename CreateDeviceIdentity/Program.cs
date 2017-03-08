@@ -25,6 +25,7 @@ namespace CreateDeviceIdentity
             try
             {
                 device = await _registryManager.AddDeviceAsync(new Device(Config.Config.DeviceId));
+                Trace.WriteLine(device.Authentication.SymmetricKey.PrimaryKey);
                 Console.WriteLine($"Generated device key: {device.Authentication.SymmetricKey.PrimaryKey}");
             }
             catch (DeviceAlreadyExistsException)

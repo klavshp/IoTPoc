@@ -3,13 +3,13 @@
     public class Config
     {
         // IoT Hub
-        public const string IoTHubConnectionString = "HostName=KlavsGetStartedWithIoTHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=bA7dlhxUWj1OZuADkxDNFGbvbaICsOWA84vdUZ5pnrM=";
-        public const string IotHubUri = "KlavsGetStartedWithIoTHub.azure-devices.net";
-        public const string IotHubD2CEndpoint = "messages/events";
+        public const string IoTHubConnectionString = "HostName=IoTPocIoTHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=JB6VfRhDkxZHxxCQkzqbOszaqJxEG2io/qo/vh3lkY0=";
+        public const string IotHubUri = "IoTPocIoTHub.azure-devices.net";
+        public const string IotHubD2CEndpoint = "messages/events";      // Default endpoint
 
         // Simulated Device
         public const string DeviceId = "SimulatedRfidReader";
-        public const string DeviceKey = "J3d6ijVFht0kEOTtfyg9KD/fRn4KsOKOJfBemewHsP0=";
+        public const string DeviceKey = "UGWH1g1MxiznfT6EZ6Ej1MwhWZe4KeQGjtuunrEdukg=";
 
         // ConnectionStrings for ServiceBus and Blob Storage
         public const string StorageConnectionString = "DefaultEndpointsProtocol=https;AccountName=klavsstorageaccount;AccountKey=rRPjNpofS3c+1ZHVIwwujbE9gAuZfKCPrOIlBjuBvqvPdQN26QYHfUrnppDRoEBGTv6BgGtPH++Nd54xskWzag==";
