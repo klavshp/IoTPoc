@@ -95,7 +95,7 @@ namespace ProcessDeviceToCloudMessages
             byte[] md5 = MD5.Create().ComputeHash(_toAppend);
             _toAppend.Seek(0, SeekOrigin.Begin);
 
-            var blobName = $"iothubd2c_{context.Lease.PartitionId}";
+            var blobName = $"iotpoc_{context.Lease.PartitionId}";
             var currentBlob = _blobContainer.GetBlockBlobReference(blobName);
 
             if (await currentBlob.ExistsAsync())
