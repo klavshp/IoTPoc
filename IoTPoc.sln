@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDeviceIdentity", "Cre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Config", "Config\Config.csproj", "{ED96143A-4E8D-48B7-826E-D2D633CF73E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatedDevice", "SimulatedDevice\SimulatedDevice.csproj", "{1D85C45B-08B9-4C6B-AE42-F103CC6C7BBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ED96143A-4E8D-48B7-826E-D2D633CF73E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED96143A-4E8D-48B7-826E-D2D633CF73E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED96143A-4E8D-48B7-826E-D2D633CF73E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D85C45B-08B9-4C6B-AE42-F103CC6C7BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D85C45B-08B9-4C6B-AE42-F103CC6C7BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D85C45B-08B9-4C6B-AE42-F103CC6C7BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D85C45B-08B9-4C6B-AE42-F103CC6C7BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
