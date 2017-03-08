@@ -12,9 +12,8 @@
         public const string DeviceKey = "UGWH1g1MxiznfT6EZ6Ej1MwhWZe4KeQGjtuunrEdukg=";
 
         // ConnectionStrings for ServiceBus and Blob Storage
-        public const string StorageConnectionString = "DefaultEndpointsProtocol=https;AccountName=klavsstorageaccount;AccountKey=rRPjNpofS3c+1ZHVIwwujbE9gAuZfKCPrOIlBjuBvqvPdQN26QYHfUrnppDRoEBGTv6BgGtPH++Nd54xskWzag==";
-        public const string ServiceBusConnectionString = "Endpoint=sb://klavssb.servicebus.windows.net/;SharedAccessKeyName=send;SharedAccessKey=/9Mi8zw2Uh5L/nuM9ppYDWiZ74fyteNNnCy0PJ8ugA4=;EntityPath=D2CTutorial";
-        public const string BlobContainer = "d2ctutorial";
-        public const string BlockBlobReference = "iothubd2c_2";
+        public const string StorageConnectionString = "DefaultEndpointsProtocol=https;AccountName=iotpocblobstorageaccount;AccountKey=7S7ebhFyDXnv4wcjRMnZvh6W8EPWaPKKogm+RIYJX61J94HqklPtzrPP0ZDvsYSWc6Wea1ZX41ItvFEMxH7FcA==";
+        public const string ServiceBusConnectionString = "Endpoint=sb://iotpocbus.servicebus.windows.net/;SharedAccessKeyName=send;SharedAccessKey=BC6GVBl871fa0jjb9yRT0Vwh9WM84TNrw58CodzVvHU=;EntityPath=IoTPocQueue";
+        public const string BlobContainer = "iotpocblobcontainer";
     }
 }
