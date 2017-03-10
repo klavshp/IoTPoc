@@ -8,6 +8,9 @@ namespace Config
         [JsonProperty("deviceId")]
         public string DeviceId;
 
+        [JsonProperty("deviceName")]
+        public string DeviceName;
+
         [JsonProperty("datetime")]
         public DateTime Datetime;
 

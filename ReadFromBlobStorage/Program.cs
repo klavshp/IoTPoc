@@ -29,7 +29,7 @@ namespace ReadFromBlobStorage
 
             foreach (var item in JsonConvert.DeserializeObject<List<RfidData>>(ToJsonArray(text)))
             {
-                Console.WriteLine("{0}   {1}   {2}", item.DeviceId, item.Datetime, item.RfidTag);
+                Console.WriteLine($"{item.DeviceId}   {item.DeviceName}   {item.Datetime}   {item.RfidTag}");
             }
 
             Console.WriteLine("Press Enter to quit.");
@@ -41,17 +41,5 @@ namespace ReadFromBlobStorage
         {
             return "[" + input.Replace("}", "},") + "]";
         }
-
-        //public class RfidData
-        //{
-        //    [JsonProperty("deviceId")]
-        //    public string DeviceId;
-
-        //    [JsonProperty("datetime")]
-        //    public DateTime Datetime;
-
-        //    [JsonProperty("rfidTag")]
-        //    public string RfidTag;
-        //}
     }
 }

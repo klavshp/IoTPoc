@@ -24,13 +24,13 @@ namespace CreateDeviceIdentity
             Device device;
             try
             {
-                device = await _registryManager.AddDeviceAsync(new Device(Config.Config.DeviceId));
+                device = await _registryManager.AddDeviceAsync(new Device(Config.Config.DeviceName));
                 Trace.WriteLine(device.Authentication.SymmetricKey.PrimaryKey);
                 Console.WriteLine($"Generated device key: {device.Authentication.SymmetricKey.PrimaryKey}");
             }
             catch (DeviceAlreadyExistsException)
             {
-                device = await _registryManager.GetDeviceAsync(Config.Config.DeviceId);
+                device = await _registryManager.GetDeviceAsync(Config.Config.DeviceName);
                 Trace.WriteLine(device.Authentication.SymmetricKey.PrimaryKey);
                 Console.WriteLine($"Found existing device key: {device.Authentication.SymmetricKey.PrimaryKey}");
             }

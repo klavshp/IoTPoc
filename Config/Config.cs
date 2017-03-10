@@ -8,7 +8,8 @@
         public const string IotHubD2CEndpoint = "messages/events";      // Default endpoint
 
         // Simulated Device
-        public const string DeviceId = "SimulatedRfidReader";
+        public const string DeviceId = "460099f7-3718-4d10-a57c-27bc9b4a7c1b";
+        public const string DeviceName = "SimulatedRfidReader";
         public const string DeviceKey = "UGWH1g1MxiznfT6EZ6Ej1MwhWZe4KeQGjtuunrEdukg=";
 
         // ConnectionStrings for ServiceBus and Blob Storage

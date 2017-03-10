@@ -10,14 +10,17 @@ namespace SimulatedDevice
 {
     internal class Program
     {
-        static DeviceClient _deviceClient;
-        static readonly Random Rand = new Random();
+        private static DeviceClient _deviceClient;
+        private static readonly Random Rand = new Random();
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Simulated RFID device\n");
+            Console.WriteLine("Starting the simulated RFID device...");
             ServiceBusEnvironment.SystemConnectivity.Mode = ConnectivityMode.Http;
-            _deviceClient = DeviceClient.Create(Config.Config.IotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey(Config.Config.DeviceId, Config.Config.DeviceKey));
+            _deviceClient = DeviceClient.Create(
+                Config.Config.IotHubUri, 
+                new DeviceAuthenticationWithRegistrySymmetricKey(Config.Config.DeviceName, Config.Config.DeviceKey)
+                );
             
             SendDeviceToCloudMessagesAsync();
 
@@ -28,17 +31,19 @@ namespace SimulatedDevice
         {
             while (true)
             {
-                var telemetryDataPoint = new RfidData
+                var rfidData = new RfidData
                 {
                     DeviceId = Config.Config.DeviceId,
+                    DeviceName = Config.Config.DeviceName,
                     Datetime = DateTime.Now,
                     RfidTag = GetRfidTag()
                 };
 
-                var messageString = JsonConvert.SerializeObject(telemetryDataPoint);
+                var messageString = JsonConvert.SerializeObject(rfidData);
                 var message = new Message(Encoding.ASCII.GetBytes(messageString));
 
                 await _deviceClient.SendEventAsync(message);
+
                 Console.WriteLine($"Sent message: {messageString}");
 
                 await Task.Delay(500);
@@ -53,6 +58,5 @@ namespace SimulatedDevice
             }
             return sb.ToString();
         }
-
     }
 }
