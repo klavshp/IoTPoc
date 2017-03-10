@@ -12,7 +12,8 @@ namespace RfidWebApi.Controllers
         public IEnumerable<RfidData> GetAllRfidData()
         {
             var rfidDataRepository = new RfidDataRepository();
-            return rfidDataRepository.GetAllRfidData();
+            var data = rfidDataRepository.GetAllRfidData();
+            return data;
         }
     }
 }

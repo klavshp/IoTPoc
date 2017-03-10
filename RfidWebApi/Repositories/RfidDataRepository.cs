@@ -10,9 +10,10 @@ namespace RfidWebApi.Repositories
 {
     public class RfidDataRepository
     {
-        public IEnumerable<RfidData> GetAllRfidData()
+        public List<RfidData> GetAllRfidData()
         {
             string text;
+            var list = new List<RfidData>();
 
             var storageAccount = CloudStorageAccount.Parse(Config.Config.StorageConnectionString);
             var blobClient = storageAccount.CreateCloudBlobClient();
@@ -26,13 +27,18 @@ namespace RfidWebApi.Repositories
                 text = Encoding.UTF8.GetString(memoryStream.ToArray());
             }
 
-            return JsonConvert.DeserializeObject<List<RfidData>>(ToJsonArray(text)).Select(item => new RfidData
+            foreach (var item in JsonConvert.DeserializeObject<List<RfidData>>(ToJsonArray(text)))
             {
-                DeviceId = item.DeviceId,
-                DeviceName = item.DeviceName,
-                Datetime = item.Datetime,
-                RfidTag = item.RfidTag
-            }).ToList();
+                list.Add(new RfidData
+                {
+                    DeviceId = item.DeviceId,
+                    DeviceName = item.DeviceName,
+                    Datetime = item.Datetime,
+                    RfidTag = item.RfidTag
+                });
+            }
+
+            return list;
         }
 
         private static string ToJsonArray(string input)

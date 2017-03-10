@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadFromBlobStorage", "Read
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RfidWebApi", "RfidWebApi\RfidWebApi.csproj", "{51BF8513-6ED2-41D7-9B09-D1C5F6E123F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RfidWebClient", "RfidWebClient\RfidWebClient.csproj", "{409916D1-82CA-4263-9127-18E1156E9F91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{51BF8513-6ED2-41D7-9B09-D1C5F6E123F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51BF8513-6ED2-41D7-9B09-D1C5F6E123F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51BF8513-6ED2-41D7-9B09-D1C5F6E123F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409916D1-82CA-4263-9127-18E1156E9F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409916D1-82CA-4263-9127-18E1156E9F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409916D1-82CA-4263-9127-18E1156E9F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409916D1-82CA-4263-9127-18E1156E9F91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
